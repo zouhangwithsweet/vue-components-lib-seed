@@ -11,7 +11,7 @@ Help you quickly create a component library
 - Speedy dev & build
 - Customize friendly
 - More Beautiful doc
-- Rich scripts *wip*
+- Rich scripts
 - Type friendly
 - `ESM` & `CJS` product
 

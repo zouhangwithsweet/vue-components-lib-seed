@@ -15,7 +15,8 @@
     "gen": "esno ./scripts/gen-component.ts --name",
     "gen-entry": "esno ./scripts/gen-entry.ts",
     "test": "jest --coverage",
-    "cz": "git commit"
+    "cz": "git commit",
+    "release": "esno ./scripts/release.ts"
   },
   "engines": {
     "node": ">=14.16.1"
