@@ -15,7 +15,7 @@ export const SideBarLink: FunctionalComponent<{
   const route = useRoute()
   const { site, frontmatter } = useData()
   const depth = props.depth || 1
-  const maxDepth = frontmatter.value.sidebarDepth || 3
+  const maxDepth = frontmatter.value.sidebarDepth || 2 // todo add it into config
 
   const headers = route.data.headers
   const text = props.item.text

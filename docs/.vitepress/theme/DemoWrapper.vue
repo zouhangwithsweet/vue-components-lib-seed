@@ -61,7 +61,7 @@ const name = frontmatter.value.component
         v-for="(demo, index) in comps"
         :key="index"
         class="
-          md-example-section
+          example-section
           flex flex-col
           mb-16 rounded-lg border-1 border-primary border-solid
           last:mb-0
@@ -69,18 +69,18 @@ const name = frontmatter.value.component
       >
         <div
           class="
-            md-example-title text-lg py-2 px-2 font-600
+            example-title text-lg py-2 px-2 font-600
             <sm:text-md
           "
           v-text="demo.component.title"
         ></div>
         <div
           v-if="demo.component.describe"
-          class="md-example-describe text-md my-1 <sm:text-xs <sm:my-1 "
+          class="example-describe text-md my-1 <sm:text-xs <sm:my-1 "
           v-text="demo.component.describe"
         ></div>
         <div class="
-            md-example-content
+            example-content
             flex-1 px-32 py-12
             <sm:p-4
           "
@@ -115,7 +115,7 @@ const name = frontmatter.value.component
         </div>
         <div
           v-if="demo.showCodeExample"
-          class="md-example-code language-vue"
+          class="example-code language-vue mx-0"
           v-html="decodedHtmlStrs[index]"
         >
         </div>
@@ -128,6 +128,15 @@ const name = frontmatter.value.component
 .demo-component {
   width: 750px;
   margin: 0 auto;
+}
+
+.example-title {
+  border-bottom: 1px solid  #eee;
+}
+
+.example-code {
+  margin: 0 auto !important;
+  width: 100%;
 }
 
 .operations {

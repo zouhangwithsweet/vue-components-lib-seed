@@ -1,3 +1,27 @@
+const klawSync = require('klaw-sync')
+const path = require('path')
+
+const basePath = '/zh-CN/components'
+const componentDocs = klawSync(path.resolve(__dirname, '..' + basePath), {
+  nodir: true,
+})
+  .map(item => path.basename(item.path).replace('.md', ''))
+  .filter(path => !path.includes('index') && !path.includes('quick-start'))
+  .map(path => ({
+    text: path.replace(/\w/, ($0) => $0.toUpperCase()),
+    link: path,
+  }))
+
+const zhComponentDocs = componentDocs.map(item => ({
+  ...item,
+  link: '/zh-CN/components/' + item.link
+}))
+
+const enComponentDocs = componentDocs.map(item => ({
+  ...item,
+  link: '/en-US/components/' + item.link
+}))
+
 module.exports = {
   base: '/vuecomponent-seed/',
   title: 'vuecomponent-seed',
@@ -32,16 +56,24 @@ module.exports = {
           text: '快速开始',
           link: '/zh-CN/components/quick-start'
         },
+        {
+          text: '组件',
+          children: zhComponentDocs,
+        }
       ],
       '/en-US/components/': [
         {
           text: 'Changelog',
           link: '/en-US/components/'
         },
-        {
+        { 
           text: 'QuickStart',
           link: '/en-US/components/quick-start'
         },
+        {
+          text: 'COMPONENTS',
+          children: enComponentDocs,
+        }
       ]
     }
   },

@@ -171,7 +171,7 @@ a.sidebar-link-item.active {
   > a.sidebar-link-item.active {
   /* border-left-color: var(--c-brand); */
   font-weight: 400;
-  background: none;
+  /* background: none; todo add it config */
 }
 
 .sidebar
@@ -182,7 +182,7 @@ a.sidebar-link-item.active {
   > a.sidebar-link-item:hover {
   /* border-left-color: var(--c-brand); */
   font-weight: 400;
-  background: none;
+  /* background: none; todo add it config */
 }
 
 .sidebar
