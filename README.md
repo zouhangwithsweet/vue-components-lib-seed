@@ -94,3 +94,16 @@ This is currently the only way to show demo. [More info](./docs/.vitepress/plugi
 ### If Using `<script setup>`
 
 [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
+
+## Credits
+
+- [esbuild-plugin-vue](https://github.com/egoist/esbuild-plugin-vue)
+- [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
+- [vueuse](https://github.com/vueuse/vueuse)
+- [vitepress-for-component](https://github.com/dewfall123/vitepress-for-component)
+- [windicss](https://github.com/windicss/windicss)
+
+## Thanks
+
+|   [<img src="https://avatars.githubusercontent.com/u/73626725?v=4" width="75px;"/><br/><sub>eeeeelle</sub>](https://github.com/eeeeelle)  |
+| :---: |
