@@ -1,5 +1,5 @@
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import { endingSlashRE, isExternal } from '../utils'
 
 const bitbucketRE = /bitbucket.org/
@@ -26,8 +26,9 @@ export function useEditLink() {
     return createUrl(repo, docsRepo, docsDir, docsBranch + '/docs', relativePath)
   })
 
+  const route = useRoute()
   const text = computed(() => {
-    return theme.value.editLinkText || 'Edit this page'
+    return route.path.includes('/en-US/') ? 'Edit this page' : (theme.value.editLinkText || 'Edit this page')
   })
 
   return {

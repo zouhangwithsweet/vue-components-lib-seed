@@ -152,6 +152,10 @@ img {
   max-width: 100%;
 }
 
+.dark img {
+  filter: invert(1);
+}
+
 ul,
 ol {
   padding-left: 1.25em;

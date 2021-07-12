@@ -6,7 +6,7 @@ heroText: My UI library
 tagline: my lib description
 
 actionText: GetStarted
-actionLink: /en-US/
+actionLink: /en-US/components/
 
 altActionText: Learn more
 altActionLink: /en-US/

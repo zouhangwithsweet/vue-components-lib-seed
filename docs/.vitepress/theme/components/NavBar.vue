@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { defineEmit, defineProps, computed } from 'vue'
+import { defineEmits, defineProps, computed } from 'vue'
 import { useWindowScroll } from '@vueuse/core'
 import { useRepo } from '../composables/repo'
 import NavBarTitle from './NavBarTitle.vue'
@@ -9,7 +9,7 @@ import GithubLink from './GithubLink.vue'
 import DarkSwitch from './DarkSwitch.vue'
 import LangSwitch from './LangSwitch.vue'
 
-defineEmit(['toggle'])
+defineEmits(['toggle'])
 
 defineProps({
   showSidebar: { type: Boolean, required: true },

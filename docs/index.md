@@ -11,7 +11,8 @@ import { onMounted } from 'vue'
 onMounted(() => {
   if (inBrowser) {
     window.location.replace(withBase('/zh-CN/'))
-    // useRouter().go(withBase('/zh-CN/'))
+  } else {
+    useRouter().go(withBase('/zh-CN/'))
   }
 })
 </script>

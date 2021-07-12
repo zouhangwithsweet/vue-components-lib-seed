@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue'
-import { useData } from 'vitepress'
+import { useData, useRoute } from 'vitepress'
 import { useLocaleLinks } from '../composables/nav'
 import { useRepo } from '../composables/repo'
 import NavLink from './NavLink.vue'
@@ -9,13 +9,16 @@ import NavDropdownLink from './NavDropdownLink.vue'
 const { theme } = useData()
 const localeLinks = useLocaleLinks()
 const repo = useRepo()
-const show = computed(() => theme.value.nav || repo.value || localeLinks.value)
+const show = computed(() => theme.value.nav || theme.value.navEn || repo.value || localeLinks.value)
+
+const route = useRoute()
+const isEn = computed(() => route.path.includes('/en-US/'))
 </script>
 
 <template>
   <nav v-if="show" class="nav-links">
     <template v-if="theme.nav">
-      <div v-for="item in theme.nav" :key="item.text" class="item">
+      <div v-for="item in !isEn ? theme.nav : theme.navEn" :key="item.text" class="item">
         <NavDropdownLink v-if="item.items" :item="item" />
         <NavLink v-else :item="item" />
       </div>

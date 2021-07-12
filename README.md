@@ -2,11 +2,15 @@
 
 Help you quickly create a component library
 
+## Docs
+
+- [doc example](https://zouhangwithsweet.github.io/vuecomponent-seed/)
+
 ## Feature
 
 - Speedy dev & build
 - Customize friendly
-- More Beautiful doc *wip*
+- More Beautiful doc
 - Rich scripts *wip*
 - Type friendly
 - `ESM` & `CJS` product
