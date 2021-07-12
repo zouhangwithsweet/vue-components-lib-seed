@@ -1,0 +1,15 @@
+---
+home: true
+heroImage: /banner.png
+heroAlt: 
+heroText: My UI library
+tagline: 我的组件库简介
+
+actionText: 开始使用
+actionLink: /zh-CN/
+
+altActionText: 了解更多
+altActionLink: /zh-CN/
+
+footer: power by vuecomponent-seed
+---

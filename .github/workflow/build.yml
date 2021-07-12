@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup node
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14.16.1'
+      - name: Install dependencies
+        run: yarn
+      - name: build
+        run: yarn build
+
+
+      - name: Build docs
+        run: yarn docs:build
+      - name: Deploy
+        uses: JamesIves/github-pages-deploy-action@3.7.1
+        with:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          BRANCH: gh-pages
+          FOLDER: docs/.vitepress/dist
+          GIT_CONFIG_NAME: vuecomponent-seed
+          COMMIT_MESSAGE: website deploy

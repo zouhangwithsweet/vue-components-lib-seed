@@ -1,5 +1,5 @@
 <template>
-  <button>click</button>
+  <button class="default">click</button>
 </template>
 
 <script lang="ts">
@@ -17,4 +17,7 @@ export default defineComponent({
 })
 </script>
 
-<style lang="stylus"></style>
+<style lang="stylus">
+.default
+  color #101010
+</style>
