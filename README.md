@@ -10,10 +10,82 @@ Help you quickly create a component library
 
 - Speedy dev & build
 - Customize friendly
-- More Beautiful doc
+- More Beautiful doc, support `Chinese` and `English`
 - Rich scripts
 - Type friendly
 - `ESM` & `CJS` product
+
+## How to use
+
+### Init
+
+```bash
+yarn
+```
+
+### Dev
+
+```bash
+yarn dev
+```
+
+### Build
+
+```bash
+yarn build
+```
+
+### Generate entry point
+
+```bash
+yarn gen-entry
+```
+
+### Generate Component
+
+```bash
+yarn gen [component\'s name]
+```
+
+### Generate dts
+
+```bash
+npx esno ./scripts/gen-dts.ts
+```
+
+## Build Docs
+
+### Docs dev
+
+```bash
+yarn docs:dev
+```
+
+### Docs build
+
+```bash
+yarn docs:build
+```
+
+### Use demo code in doc
+
+Take button as an example.
+
+In `button.md`, insert the following code
+
+```html
+<demo-wrapper
+  src="src/packages/button/demo"
+  :demos="demos"
+/>
+
+<script setup>
+const demos = import.meta.globEager('../../../src/packages/button/demo/demo*.vue')
+</script>
+```
+
+There is a global component [`DemoWrapper`](./docs/.vitepress/theme/DemoWrapper.vue) to display all demos.
+This is currently the only way to show demo. [More info](./docs/.vitepress/plugins/demo.js)
 
 ## Recommended IDE Setup
 
