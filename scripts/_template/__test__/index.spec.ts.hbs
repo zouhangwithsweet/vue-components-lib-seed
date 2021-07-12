@@ -4,10 +4,8 @@ import {{properCase name}} from '../index.vue'
 describe('{{properCase name}}.vue', () => {
   test('render', () => {
     const wrapper = mount({{properCase name}}, {
-      props: {
-        name: 'scan',
-      },
+      props: {},
     })
-    expect(wrapper.classes()).toContain('md-{{dashCase name}}')
+    expect(wrapper.classes()).toContain('{{dashCase name}}')
   })
 })

@@ -9,7 +9,18 @@
     "resolveJsonModule": true,
     "esModuleInterop": true,
     "lib": ["esnext", "dom"],
-    "types": ["vite/client", "@types/jest", "@types/node"] 
+    "types": ["vite/client", "@types/jest", "@types/node"],
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "outDir": "dist",
+    "paths": {
+      "my-lib/*": [
+        "./src/packages/*"
+      ],
+      "dist/*": [
+        "./dist/es/*"
+      ]
+    },
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"]
 }

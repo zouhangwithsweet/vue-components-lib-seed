@@ -94,30 +94,16 @@ const genVueTypes = async () => {
     const emitOutput = sourceFile.getEmitOutput()
     for (const outputFile of emitOutput.getOutputFiles()) {
       const filepath = outputFile.getFilePath()
-      const esPath = filepath.replace('/types/', '/es/')
-      const libPath = esPath.replace('/es/', '/lib/')
 
-      await Promise.all([
-        fs.promises.mkdir(path.dirname(esPath), {
-          recursive: true,
-        }),
-        fs.promises.mkdir(path.dirname(libPath), {
-          recursive: true,
-        }),
-      ])
+      await fs.promises.mkdir(path.dirname(filepath), {
+        recursive: true,
+      })
 
-      await Promise.all([
-        fs.promises.writeFile(
-          esPath,
-          outputFile.getText(),
-          'utf8'
-        ),
-        fs.promises.writeFile(
-          libPath,
-          outputFile.getText(),
-          'utf8'
-        ),
-      ])
+      await fs.promises.writeFile(
+        filepath,
+        outputFile.getText(),
+        'utf8'
+      )
     }
   }
 }

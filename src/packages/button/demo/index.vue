@@ -1,12 +1,12 @@
 <template>
   <div class="mylib-nav">
     <p class="home" @click="$router.push('/')">
-      <mylib-icon name="home" size="lg"></mylib-icon>
+      <mdi:home />
     </p>
-    <p class="name">{{ properCase name }}</p>
+    <p class="name">Button</p>
     <p class="name-zh"><del>组件中文名称</del></p>
   </div>
-  <div class="mylib-example {{dashCase name}}">
+  <div class="mylib-example button">
     <section
       v-for="(demo, index) in demos"
       :key="index"
@@ -32,7 +32,7 @@ import { createDemoModule } from '../../utils/index'
 const demos = import.meta.globEager('./demo*.vue')
 
 export default createDemoModule(
-  '{{properCase name}}',
+  'Button',
   Object.entries(demos).map((demo) => demo[1].default)
 )
 </script>

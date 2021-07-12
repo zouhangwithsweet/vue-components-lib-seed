@@ -1,4 +1,5 @@
 {
+  "name": "my-lib",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --host",
@@ -16,6 +17,16 @@
     "test": "jest --coverage",
     "cz": "git commit"
   },
+  "engines": {
+    "node": ">=14.16.1"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "main": "dist/lib/my-lib.umd.js",
+  "module": "dist/es/my-lib.esm.js",
+  "typings": "dist/types/my-lib.d.ts",
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
