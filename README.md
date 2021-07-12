@@ -10,8 +10,8 @@ Help you quickly create a component library
 
 - Speedy dev & build
 - Customize friendly
-- More Beautiful doc, support `Chinese` and `English`
-- Rich scripts
+- More Beautiful doc, support `Chinese` and `English`. Support `Dark Mode` by [vueuse](https://github.com/vueuse/vueuse)
+- Rich scripts, inspired by [esbuild-plugin-vue](https://github.com/egoist/esbuild-plugin-vue) & [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
 - Type friendly
 - `ESM` & `CJS` product
 
@@ -85,7 +85,7 @@ const demos = import.meta.globEager('../../../src/packages/button/demo/demo*.vue
 ```
 
 There is a global component [`DemoWrapper`](./docs/.vitepress/theme/DemoWrapper.vue) to display all demos.
-This is currently the only way to show demo. [More info](./docs/.vitepress/plugins/demo.js)
+This is currently the only way to show demo. [More info](./docs/.vitepress/plugins/demo.js).
 
 ## Recommended IDE Setup
 
@@ -94,7 +94,3 @@ This is currently the only way to show demo. [More info](./docs/.vitepress/plugi
 ### If Using `<script setup>`
 
 [`<script setup>`](https://github.com/vuejs/rfcs/pull/227) is a feature that is currently in RFC stage. To get proper IDE support for the syntax, use [Volar](https://marketplace.visualstudio.com/items?itemName=johnsoncodehk.volar) instead of Vetur (and disable Vetur).
-
-## Type Support For `.vue` Imports in TS
-
-Since TypeScript cannot handle type information for `.vue` imports, they are shimmed to be a generic Vue component type by default. In most cases this is fine if you don't really care about component prop types outside of templates. However, if you wish to get actual prop types in `.vue` imports (for example to get props validation when using manual `h(...)` calls), you can use the following:
