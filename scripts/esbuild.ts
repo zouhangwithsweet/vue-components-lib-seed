@@ -59,7 +59,7 @@ Promise.all([
   }),
 ])
   .then(async () => {
-    await combineCss()
+    // await combineCss()
     spinner.succeed('Done !')
   })
   .catch(() => {
