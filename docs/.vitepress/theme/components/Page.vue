@@ -1,6 +1,11 @@
 <script setup lang="ts">
+import { useData } from 'vitepress'
+import { computed } from 'vue'
 import PageFooter from './PageFooter.vue'
 import NextAndPrevLinks from './NextAndPrevLinks.vue'
+
+const { frontmatter } = useData()
+const customClass = computed(() => frontmatter.value.class ?? '')
 </script>
 
 <template>
@@ -8,7 +13,7 @@ import NextAndPrevLinks from './NextAndPrevLinks.vue'
     <div class="container">
       <slot name="top" />
 
-      <Content class="content" />
+      <Content class="content" :class="customClass"/>
       <PageFooter />
       <NextAndPrevLinks />
 

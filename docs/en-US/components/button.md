@@ -1,3 +1,6 @@
+---
+class: 'button-doc'
+---
 # Button
 
 ## use

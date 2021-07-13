@@ -1,3 +1,6 @@
+---
+class: 'button-doc'
+---
 # Button 按钮
 
 ## use
