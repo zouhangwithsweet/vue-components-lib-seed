@@ -1,6 +1,10 @@
 # A Vue3 UI library template
 
-Help you quickly create a component library
+Help you quickly create a component library.
+
+- :rocket: dev with `Vite`
+- :airplane: build with `esbuild`
+- :helicopter: generate types with `ts-morph`
 
 ## Docs
 
@@ -8,16 +12,18 @@ Help you quickly create a component library
 
 ## Feature
 
-- Speedy dev & build
-- Customize friendly
-- More Beautiful doc, support `Chinese` and `English`. Support `Dark Mode` by [vueuse](https://github.com/vueuse/vueuse)
-- Rich scripts, inspired by [esbuild-plugin-vue](https://github.com/egoist/esbuild-plugin-vue) & [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
-- Type friendly
-- `ESM` & `CJS` product
+- :rainbow: Speedy dev & build
+- :fireworks: Customize friendly
+- :pencil: More beautiful doc, support `Chinese` and `English`. Support `Dark Mode` by [vueuse](https://github.com/vueuse/vueuse)
+- :lollipop: Rich scripts, inspired by [esbuild-plugin-vue](https://github.com/egoist/esbuild-plugin-vue) & [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
+- :yum: Type friendly
+- :truck: `ESM` & `CJS` product
 
 ## How to use
 
-### Init
+[Generate a repository by vuecompoent-seed](https://github.com/zouhangwithsweet/vuecomponent-seed/generate)
+
+### Install
 
 ```bash
 yarn
@@ -35,13 +41,23 @@ yarn dev
 yarn build
 ```
 
+### Test
+
+```bash
+yarn test
+```
+
 ### Generate entry point
+
+> The entry file is the `input` option for rollup.
 
 ```bash
 yarn gen-entry
 ```
 
 ### Generate Component
+
+> A component's name is required for this command.
 
 ```bash
 yarn gen [component\'s name]
@@ -51,6 +67,14 @@ yarn gen [component\'s name]
 
 ```bash
 npx esno ./scripts/gen-dts.ts
+```
+
+### Release
+
+> This command will add git tag、generate changelog. You test your lib with argument `--dry`
+
+```bash
+yarn release [--dry]
 ```
 
 ## Build Docs
@@ -66,6 +90,11 @@ yarn docs:dev
 ```bash
 yarn docs:build
 ```
+
+### Docs deploy
+
+Here is a git [action](./.git/workflows/build.yml). When you push the code to the `master`, the document will be automatically deployed on `gh-pages`.
+Then you can set the Github Pages base on the `gh-pages` branch.
 
 ### Use demo code in doc
 
@@ -105,5 +134,5 @@ This is currently the only way to show demo. [More info](./docs/.vitepress/plugi
 
 ## Thanks
 
-|   [<img src="https://avatars.githubusercontent.com/u/73626725?v=4" width="75px;"/><br/><sub>eeeeelle</sub>](https://github.com/eeeeelle)  |
+| [<img src="https://avatars.githubusercontent.com/u/73626725?v=4" width="75px;"/><br/><sub>eeeeelle</sub>](https://github.com/eeeeelle) |
 | :---: |
