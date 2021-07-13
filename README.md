@@ -118,6 +118,16 @@ const demos = import.meta.globEager('../../../src/packages/button/demo/demo*.vue
 There is a global component [`DemoWrapper`](./docs/.vitepress/theme/DemoWrapper.vue) to display all demos.
 This is currently the only way to show demo. [More info](./docs/.vitepress/plugins/demo.js).
 
+### Custom doc style
+
+You can add the `class` in frontmatter, then the `<Content>` would inherit the `class`. Of course, the `windicss` can be used here.
+
+```markdown
+---
+class: 'custom-class'
+---
+```
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://github.com/johnsoncodehk/volar).
