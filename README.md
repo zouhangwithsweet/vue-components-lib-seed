@@ -31,6 +31,8 @@ yarn
 
 ### Dev
 
+> Base on [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages), the `src/pages/index.vue` is the entry page for development. You can visit `/[component-name]/demo` to check component, like `http://localhost:3000/#/button/demo`.
+
 ```bash
 yarn dev
 ```
