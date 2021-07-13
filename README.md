@@ -71,7 +71,7 @@ npx esno ./scripts/gen-dts.ts
 
 ### Release
 
-> This command will add git tag、generate changelog. You test your lib with argument `--dry`
+> This command will add git tag、generate changelog. You can test your lib with argument `--dry`
 
 ```bash
 yarn release [--dry]
