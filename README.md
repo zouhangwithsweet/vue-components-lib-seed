@@ -143,6 +143,7 @@ class: 'custom-class'
 - [vueuse](https://github.com/vueuse/vueuse)
 - [vitepress-for-component](https://github.com/dewfall123/vitepress-for-component)
 - [windicss](https://github.com/windicss/windicss)
+- [Element Plus](https://github.com/element-plus/element-plus)
 
 ## Thanks
 
