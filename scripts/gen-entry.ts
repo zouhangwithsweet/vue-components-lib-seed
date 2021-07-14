@@ -46,11 +46,15 @@ async function parseComponentExports() {
     const code = fs.readFileSync(comp, {
       encoding: 'utf-8',
     })
-    const [_, exports] = parse(code)
-    str += `import ${exports[0]} from '${comp
+    // const [_, exports] = parse(code)
+
+    const NAME_RE = /(\w+)\.(install)/
+    const matchs = code.match(NAME_RE)
+
+    str += `import ${matchs[1]} from '${comp
       .replace(/\.ts$/, '')
       .replace(`${CWD}/src/packages`, '.')}'\n`
-    componentNames.push(exports[0])
+    componentNames.push(matchs[1])
   }
   str += '\n'
   str += `const components = [${componentNames.join(
