@@ -95,8 +95,8 @@ yarn docs:build
 
 ### Docs deploy
 
-Here is a git [action](./.github/workflows/build.yml). When you push the code to the `master`, the document will be automatically deployed on `gh-pages`.
-Then you can set the Github Pages benefited from the `gh-pages` branch.
+Here is a git [action](./.github/workflows/build.yml). When you push the code to the `master` branch, the document will be automatically deployed on `gh-pages` branch.
+Then you can set the Github Pages's source on the `gh-pages` branch.
 
 ### Use demo code in doc
 
