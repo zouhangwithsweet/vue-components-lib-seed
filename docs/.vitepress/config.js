@@ -22,12 +22,14 @@ const enComponentDocs = componentDocs.map(item => ({
   link: '/en-US/components/' + item.link
 }))
 
+const REPO_BASE_URL = '/vuecomponent-seed/'
+
 module.exports = {
-  base: '/vuecomponent-seed/',
+  base: process.env.VERCEL_BUILD ? '/' : REPO_BASE_URL,
   title: 'vuecomponent-seed',
   description: 'vuecomponent-seed doc',
   head: [
-    ['link', { rel: 'icon', type: 'image/png', href: '/vuecomponent-seed/favicon.ico' }],
+    ['link', { rel: 'icon', type: 'image/png', href: REPO_BASE_URL + 'favicon.ico' }],
     ['link', { rel: 'dns-prefetch', href: 'https://fonts.gstatic.com' }],
     ['link', { rel: 'preconnect', crossorigin: 'anonymous', href: 'https://fonts.gstatic.com' }],
     ['link', { href: 'https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200;400;500&family=Inter:wght@200;400;500;600', rel: 'stylesheet' }],
@@ -35,7 +37,7 @@ module.exports = {
 
   lang: 'zh-CN',
   themeConfig: {
-    repo: 'https://github.com/zouhangwithsweet/vuecomponent-seed',
+    repo: 'https://github.com/zouhangwithsweet/vuecomponent-seed', // replace the repo link
     docsBranch: 'master',
     editLinks: true,
     editLinkText: '为此文档提供修改建议',
