@@ -31,7 +31,7 @@ yarn
 
 ### Dev
 
-> Base on [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages), the `src/pages/index.vue` is the entry page for development. You can visit `/[component-name]/demo` to check component, like `http://localhost:3000/#/button/demo`.
+> Benefited from  [`vite-plugin-pages`](https://github.com/hannoeru/vite-plugin-pages), the `src/pages/index.vue` is the entry page for development. You can visit `/[component-name]/demo` to check component, like `http://localhost:3000/#/button/demo`.
 
 ```bash
 yarn dev
@@ -96,7 +96,7 @@ yarn docs:build
 ### Docs deploy
 
 Here is a git [action](./.github/workflows/build.yml). When you push the code to the `master`, the document will be automatically deployed on `gh-pages`.
-Then you can set the Github Pages base on the `gh-pages` branch.
+Then you can set the Github Pages benefited from the `gh-pages` branch.
 
 ### Use demo code in doc
 
