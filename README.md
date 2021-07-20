@@ -81,7 +81,7 @@ yarn release [--dry]
 
 ## Build Docs
 
-> :exclamation: Noted: you should run `yarn build:lib` before run this command. Because the docs need the builed bundle.
+> :exclamation: Noted: you should run `yarn build:lib` before run this command. Because the docs need the build bundle.
 
 ### Docs dev
 
