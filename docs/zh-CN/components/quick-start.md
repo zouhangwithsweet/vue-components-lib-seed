@@ -84,6 +84,8 @@ yarn release [--dry]
 
 ## 文档的构建
 
+> :exclamation: Noted: you should run `yarn build:lib` before run this command. Because the docs need the build bundle.
+
 ### 开发文档
 
 ```bash

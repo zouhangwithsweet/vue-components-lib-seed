@@ -29,7 +29,14 @@ const componentEntrys = klawSync(PACKAGES_PATH, {
       !dir.path.endsWith('locale') &&
       !dir.path.endsWith('composable')
   )
-  .map((dir) => dir.path + '/index.ts')
+  .map((dir) =>
+    /^win/.test(process.platform)
+      ? path
+          .join(dir.path, '/index.ts')
+          .split(path.sep)
+          .join(path.posix.sep)
+      : path.join(dir.path, '/index.ts')
+  )
 
 async function parseComponentExports() {
   let str = ''
@@ -90,7 +97,12 @@ async function writeEntry() {
   /**
    * 格式化
    */
-  spawn('eslint', ['./src/packages/my-lib.ts', '--fix'])
+  spawn(
+    /^win/.test(process.platform) ? 'eslint.cmd' : 'eslint',
+    ['./src/packages/my-lib.ts', '--fix']
+  ).on('error', function (err) {
+    throw err
+  })
 }
 
 writeEntry()

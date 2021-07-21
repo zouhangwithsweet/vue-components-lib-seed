@@ -4,7 +4,7 @@
   "scripts": {
     "dev": "vite --host",
     "serve": "vite preview",
-    "build:bundle": "yarn gen-entry && NODE_ENV=build rollup -c ./scripts/rollup.config.ts",
+    "build:bundle": "yarn gen-entry && cross-env NODE_ENV=build rollup -c ./scripts/rollup.config.ts",
     "build:lib": "esno ./scripts/esbuild.ts",
     "build": "rm -rf dist && esno ./scripts/gen-dts.ts && yarn build:bundle && yarn build:lib",
     "build:example": "vue-tsc --noEmit && vite build --base=./",
@@ -68,6 +68,7 @@
     "autoprefixer": "^10.2.5",
     "babel-jest": "^26.6.3",
     "commitizen": "^4.2.4",
+    "cross-env": "^7.0.3",
     "cz-conventional-changelog": "^3.3.0",
     "es-module-lexer": "^0.4.1",
     "esbuild-plugin-vue": "^0.1.2",
