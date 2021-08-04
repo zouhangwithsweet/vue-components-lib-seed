@@ -11,7 +11,7 @@ const PACKAGES_PATH = path.resolve(
   '../src/packages'
 )
 
-const componentEntrys = klawSync(PACKAGES_PATH, {
+export const componentEntrys = klawSync(PACKAGES_PATH, {
   nofile: true,
   depthLimit: 0,
 }).map((dir) => dir.path + '/index.ts')

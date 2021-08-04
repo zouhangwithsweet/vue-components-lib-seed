@@ -4,3 +4,5 @@ dist
 dist-ssr
 *.local
 my-lib.ts
+docs/zh-CN/components
+docs/en-US/components

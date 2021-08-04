@@ -1,5 +1,7 @@
 # A Vue3 UI library template
 
+[中文文档](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/README_zh.md)
+
 Help you quickly create a component library.
 
 - :rocket: dev with `Vite`
@@ -97,7 +99,7 @@ yarn docs:build
 
 ### Docs deploy
 
-Here is a git [action](./.github/workflows/build.yml). When you push the code to the `master` branch, the document will be automatically deployed on `gh-pages` branch.
+Here is a git [action](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/.github/workflows/build.yml). When you push the code to the `master` branch, the document will be automatically deployed on `gh-pages` branch.
 Then you can set the Github Pages's source on the `gh-pages` branch.
 
 ### Use demo code in doc
@@ -117,8 +119,8 @@ const demos = import.meta.globEager('../../../src/packages/button/demo/demo*.vue
 </script>
 ```
 
-There is a global component [`DemoWrapper`](./docs/.vitepress/theme/DemoWrapper.vue) to display all demos.
-This is currently the only way to show demo. [More info](./docs/.vitepress/plugins/demo.js).
+There is a global component [`DemoWrapper`](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/docs/.vitepress/theme/DemoWrapper.vue) to display all demos.
+This is currently the only way to show demo. [More info](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/docs/.vitepress/plugins/demo.js).
 
 ### Custom doc style
 
