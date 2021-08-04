@@ -64,6 +64,7 @@ const name = frontmatter.value.component
           example-section
           flex flex-col
           mb-16 rounded-lg border-1 border-primary border-solid
+          overflow-hidden
           last:mb-0
         "
       >

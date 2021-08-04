@@ -1,9 +1,10 @@
-import path from 'path'
-import { build, BuildOptions } from 'esbuild'
+import path, { resolve, dirname } from 'path'
+import { build, BuildOptions, buildSync } from 'esbuild'
 import { cwd } from 'process'
 import fs from 'fs'
 import ora from 'ora'
 import klawSync from 'klaw-sync'
+import { parse, init } from 'es-module-lexer'
 import vue from './plugins/esbuild-vue-plugin'
 
 const PACKAGES_PATH = path.resolve(
@@ -59,7 +60,8 @@ Promise.all([
   }),
 ])
   .then(async () => {
-    // await combineCss()
+    await combineCss()
+    await combineDepsCss()
     spinner.succeed('Done !')
   })
   .catch(() => {
@@ -102,4 +104,40 @@ async function combineCss() {
       `${cwd()}/dist/lib/${name}`
     ),
   ])
+}
+
+async function combineDepsCss() {
+  const PATH_RE = /^\.*\//
+  const alljs = klawSync(`${cwd()}/dist/es`, {
+    nofile: true,
+    depthLimit: 0,
+  }).map((dir) => dir.path + '/index.js')
+  await init
+  alljs.forEach((js) => {
+    const [imports] = parse(fs.readFileSync(js, 'utf-8'))
+    const cssFile = resolve(dirname(js), './index.css')
+
+    if (fs.existsSync(cssFile)) {
+      const selfCss = `import './index.css'\n`
+      const depsCss = imports
+        .flat()
+        .map((item) => item.n)
+        .filter((n) => !n.endsWith('utils'))
+        .filter((n) => PATH_RE.test(n))
+        .map((n) => `import '${n}/index.css'`)
+        .join('\n')
+      const styleFile = resolve(dirname(js), './style.js')
+
+      fs.writeFileSync(styleFile, depsCss + '\n' + selfCss)
+
+      buildSync({
+        entryPoints: [styleFile],
+        format: 'cjs',
+        outfile: resolve(
+          dirname(js).replace('/es/', '/lib/'),
+          './style.js'
+        ),
+      })
+    }
+  })
 }
