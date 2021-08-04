@@ -1,6 +1,6 @@
 # A Vue3 UI library template
 
-[中文文档](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/README_zh.md)
+[中文文档](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/README.zh-CN.md)
 
 Help you quickly create a component library.
 
