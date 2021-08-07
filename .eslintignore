@@ -3,3 +3,4 @@ node_modules/
 **/*.styl
 **/*.html
 .eslintrc.js
+!.vitepress

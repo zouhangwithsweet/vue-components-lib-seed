@@ -38,7 +38,7 @@ const componentEntrys = klawSync(PACKAGES_PATH, {
       : path.join(dir.path, '/index.ts')
   )
 
-async function parseComponentExports() {
+export async function parseComponentExports() {
   let str = ''
   const componentNames = []
   const version = pkg.version

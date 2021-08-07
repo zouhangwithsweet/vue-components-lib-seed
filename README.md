@@ -111,12 +111,7 @@ In `button.md`, insert the following code
 ```html
 <demo-wrapper
   src="src/packages/button/demo"
-  :demos="demos"
 />
-
-<script setup>
-const demos = import.meta.globEager('../../../src/packages/button/demo/demo*.vue')
-</script>
 ```
 
 There is a global component [`DemoWrapper`](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/docs/.vitepress/theme/DemoWrapper.vue) to display all demos.

@@ -5,6 +5,7 @@ import { Project, SourceFile } from 'ts-morph'
 import vueCompiler from '@vue/compiler-sfc'
 import klawSync from 'klaw-sync'
 import ora from 'ora'
+import { parseComponentExports } from './gen-entry'
 
 const TSCONFIG_PATH = path.resolve(cwd(), 'tsconfig.json')
 const DEMO_RE = /\/demo\/\w+\.vue$/
@@ -27,6 +28,15 @@ const genVueTypes = async () => {
   })
 
   const sourceFiles: SourceFile[] = []
+
+  const entry = await parseComponentExports()
+  const entrySourceFile = project.createSourceFile(
+    path.resolve(cwd(), 'src/packages/my-lib.ts'),
+    entry,
+    { overwrite: true }
+  )
+
+  sourceFiles.push(entrySourceFile)
 
   const filePaths = klawSync(
     path.resolve(cwd(), 'src/packages'),

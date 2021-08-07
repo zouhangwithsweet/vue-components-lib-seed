@@ -111,12 +111,7 @@ vuecompoent-seed 提供了一个 github [action](https://github.com/zouhangwiths
 ```html
 <demo-wrapper
   src="src/packages/button/demo"
-  :demos="demos"
 />
-
-<script setup>
-const demos = import.meta.globEager('../../../src/packages/button/demo/demo*.vue')
-</script>
 ```
 
 vuecomponent-sedd 提供了一个全局组件 [`DemoWrapper`](https://github.com/zouhangwithsweet/vuecomponent-seed/docs/.vitepress/theme/DemoWrapper.vue) 用来展示所有的组件示例。
