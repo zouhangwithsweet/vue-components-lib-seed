@@ -26,6 +26,15 @@
 
 [通过 vuecompoent-seed 生成你的仓库](https://github.com/zouhangwithsweet/vuecomponent-seed/generate)
 
+### 检查项
+
+- [ ] Replace all `my-lib` words with your libary name. Just search `my-lib` and replace them in VScode
+  - `.gitignore`
+  - `package.json`
+  - `vite.config.ts`
+  - `.vitepress`
+  - `scripts` ...
+
 ### 安装
 
 ```bash

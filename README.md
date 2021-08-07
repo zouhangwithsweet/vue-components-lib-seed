@@ -25,6 +25,15 @@ Help you quickly create a component library.
 
 [Generate a repository by vuecompoent-seed](https://github.com/zouhangwithsweet/vuecomponent-seed/generate)
 
+### Checklist
+
+- [ ] Replace all `my-lib` words with your libary name. Just search `my-lib` and replace them in VScode
+  - `.gitignore`
+  - `package.json`
+  - `vite.config.ts`
+  - `.vitepress`
+  - `scripts` ...
+
 ### Install
 
 ```bash
