@@ -97,8 +97,11 @@ const name = frontmatter.value.component
           v-if="demo.component.describe"
           class="
             example-describe
-            text-md
+            text-sm
+            py-2
+            px-2
             my-1
+            text-gray-500
             <sm:text-xs <sm:my-1
           "
           v-text="demo.component.describe"
@@ -161,7 +164,7 @@ const name = frontmatter.value.component
 
 <style lang="stylus">
 .demo-component {
-  width: 750px;
+  width: 375px;
   margin: 0 auto;
 }
 
