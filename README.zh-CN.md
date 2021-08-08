@@ -155,5 +155,5 @@ class: 'custom-class'
 
 ## 特别感谢
 
-| [<img src="https://avatars.githubusercontent.com/u/73626725?v=4" width="75px;"/><br/><sub>eeeeelle</sub>](https://github.com/eeeeelle) |
+| [<img src="https://avatars.githubusercontent.com/u/73626725?v=4" width="75px;"/><br/>eeeeelle<br/> <sub>:writing_hand: 发布脚本</sub>](https://github.com/eeeeelle) |
 | :---: |
