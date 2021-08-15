@@ -36,7 +36,6 @@ const config: UserConfig = {
       preflight: false,
     }),
   ],
-  logLevel: 'error',
 }
 
 export default config
