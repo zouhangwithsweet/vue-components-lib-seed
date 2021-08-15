@@ -133,6 +133,7 @@ async function combineDepsCss() {
       buildSync({
         entryPoints: [styleFile],
         format: 'cjs',
+        allowOverwrite: true,
         outfile: resolve(
           dirname(js).replace('/es/', '/lib/'),
           './style.js'
