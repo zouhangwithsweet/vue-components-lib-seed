@@ -1,4 +1,4 @@
-import { createServer } from 'vitepress'
+import { createServer } from 'fisand-doc'
 import { createLogger } from 'vite'
 import chokidar from 'chokidar'
 import path from 'path'

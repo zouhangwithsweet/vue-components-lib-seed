@@ -1,6 +1,4 @@
-import 'windi-base.css'
-import 'windi-components.css'
-import 'windi-utilities.css'
+import 'virtual:windi.css'
 import './styles/vars.css'
 import './styles/layout.css'
 import './styles/code.css'
@@ -10,16 +8,11 @@ import './styles/prism.css'
 import('../../../dist/es/my-lib.min.css')
 
 import { Theme } from 'vitepress'
-import Layout from './Layout.vue'
-import NotFound from './NotFound.vue'
-import DemoWrapper from './DemoWrapper.vue'
+import Layout from 'fisand-doc/dist/client/theme-default/Layout.vue'
 
 const theme: Theme = {
   Layout,
-  NotFound,
-  enhanceApp({ app }) {
-    app.component('DemoWrapper', DemoWrapper)
-  },
+  enhanceApp({ app }) {},
 }
 
 export default theme

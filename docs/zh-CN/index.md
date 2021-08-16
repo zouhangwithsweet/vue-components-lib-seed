@@ -1,7 +1,9 @@
 ---
 home: true
 heroImage: /banner.png
+heroBanner: /banner.png
 heroAlt: 
+heroSub: 'seed'
 heroText: My UI library
 tagline: 我的组件库简介
 

@@ -1,5 +1,6 @@
 ---
 class: 'button-doc'
+sidebarDepth: 2
 ---
 # Button
 

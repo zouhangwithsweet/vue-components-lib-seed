@@ -288,3 +288,59 @@ li > svg {
   vertical-align: middle;
   transform: translateY(-10%);
 }
+
+.nav-icons {
+  margin-left: 12px;
+  padding-left: .5rem;
+}
+
+@media (min-width: 720px) {
+  .nav-links {
+    display: flex;
+    padding: 2px 0 0 !important;
+    align-items: center;
+    border-bottom: 0;
+  }
+
+  .item + .item {
+    padding-left: 18px;
+  }
+}
+
+.page .fisand-demo-container .fisand-demo:last-child {
+  display: none;
+}
+
+.fisand-demo .demo-component {
+  margin: 32px auto;
+  padding: 4px;
+  width: 375px;
+  box-shadow: 0 0 4px rgb(218 218 220 / 59%);
+  border-radius: 8px;
+}
+
+@media (max-width: 640px) {
+  .fisand-demo {
+    max-width: 100%;
+  }
+
+  .fisand-demo .demo-component {
+    width: 100%;
+    margin: 16px auto;
+  }
+}
+@media (min-width: 640px) and (max-width: 1024px) {
+  .fisand-demo > div {
+    flex: 0 0 100%;
+  }
+}
+
+.animate-text {
+  left: 90%;
+}
+
+@media (min-width: 1280px) {
+  .animate-text {
+    left: 70%;
+  }
+}
