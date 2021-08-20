@@ -313,7 +313,7 @@ li > svg {
 
 .fisand-demo .demo-component {
   margin: 32px auto;
-  padding: 4px;
+  padding: 16px;
   width: 375px;
   box-shadow: 0 0 4px rgb(218 218 220 / 59%);
   border-radius: 8px;

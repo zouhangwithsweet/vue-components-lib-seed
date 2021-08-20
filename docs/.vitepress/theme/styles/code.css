@@ -119,10 +119,20 @@ div[class*='language-'].line-numbers-mode {
 div[class*='language-']:before {
   position: absolute;
   top: 0.6em;
-  right: 1em;
+  right: .5em;
   z-index: 2;
   font-size: 0.8rem;
-  color: #888;
+  color: #9ca3af;
+}
+
+div[class*='language-'].example-code:before {
+  position: absolute;
+  top: unset;
+  bottom: 0.6em;
+  right: .5em;
+  z-index: 2;
+  font-size: 0.8rem;
+  color: #9ca3af;
 }
 
 div[class~='language-html']:before,

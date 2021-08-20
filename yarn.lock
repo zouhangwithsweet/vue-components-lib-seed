@@ -4192,10 +4192,10 @@ fined@^1.0.1:
     object.pick "^1.2.0"
     parse-filepath "^1.0.1"
 
-fisand-doc@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/fisand-doc/-/fisand-doc-0.0.7.tgz#7262105c583c380bd840120d5295d7c4a4355812"
-  integrity sha512-ojM3Qy9hJa+UdzUp5tpUw+LcvnGGGKOXEDmVO4TmGv2H5GamVdhiw10/HviuGO8NJnE+pM+3C/0SGAXI90zzlQ==
+fisand-doc@^0.0.10:
+  version "0.0.10"
+  resolved "https://registry.yarnpkg.com/fisand-doc/-/fisand-doc-0.0.10.tgz#b3b59944a6d48bf293d8fba2706af4ea47c5791f"
+  integrity sha512-l3C0PSl77LTaWYU0ioy64SXvIH6KI669WMYY+zVy3bhHBHiFmhIVK5nNOhTwGJX13f8yZkhtjUIzKmqp9/WLQQ==
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"
