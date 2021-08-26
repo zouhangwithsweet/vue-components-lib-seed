@@ -69,7 +69,7 @@ li > div[class*='language-'] {
   padding: 0;
   line-height: var(--code-line-height);
   font-size: var(--code-font-size);
-  color: #eee;
+  color: inherit;
 }
 
 /* Line highlighting */
