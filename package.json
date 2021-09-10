@@ -77,7 +77,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-vue": "^7.9.0",
     "esno": "^0.5.0",
-    "fisand-doc": "^0.0.11",
+    "fisand-doc": "^0.0.18",
     "glob": "^7.1.7",
     "husky": "4",
     "jest": "^26.6.3",

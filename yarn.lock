@@ -4192,10 +4192,10 @@ fined@^1.0.1:
     object.pick "^1.2.0"
     parse-filepath "^1.0.1"
 
-fisand-doc@^0.0.11:
-  version "0.0.11"
-  resolved "https://registry.yarnpkg.com/fisand-doc/-/fisand-doc-0.0.11.tgz#0c107cf9a47b04b79fc54d680b2017e1f9333864"
-  integrity sha512-OGBA3xqCOMZKbyr+UC8yYcmCXVsYgltir8hs+iYOnwf7onWdTmd2TpJC0Uj937+TlVpK06IYygdCGFVcfnfdcA==
+fisand-doc@^0.0.18:
+  version "0.0.18"
+  resolved "https://registry.yarnpkg.com/fisand-doc/-/fisand-doc-0.0.18.tgz#0b0856d19c8e508bceed985ddd08b329885f34a8"
+  integrity sha512-6J/bK6BYKHkZXs2KSfqkNi94FqqZnXXkuOZKmAO2Zv0WGvpLyzPV9+GvfrH7AUHijr/+8g28GgSVPDRCM76Qqg==
   dependencies:
     "@docsearch/css" "^1.0.0-alpha.28"
     "@docsearch/js" "^1.0.0-alpha.28"
@@ -4225,6 +4225,7 @@ fisand-doc@^0.0.11:
     polka "^0.5.2"
     prismjs "^1.23.0"
     sirv "^1.0.12"
+    stylus "^0.54.8"
     vite "^2.4.4"
     vite-plugin-components "^0.13.2"
     vite-plugin-icons "^0.6.5"
