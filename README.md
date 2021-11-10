@@ -123,8 +123,8 @@ In `button.md`, insert the following code
 />
 ```
 
-There is a global component [`DemoWrapper`](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/docs/.vitepress/theme/DemoWrapper.vue) to display all demos.
-This is currently the only way to show demo. [More info](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/docs/.vitepress/plugins/demo.js).
+There is a global component [`Demos`](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/client/app/components/Demos.vue) to display all demos.
+This is currently the only way to show demo. [More info](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/node/markdown/plugins/demo.ts).
 
 ### Custom doc style
 
