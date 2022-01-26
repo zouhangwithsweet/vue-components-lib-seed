@@ -1,4 +1,8 @@
 /**
+ * @deprecated
+ * recommend unplugin-vue https://github.com/sxzz/unplugin-vue
+ */
+/**
  * fork from https://github.com/egoist/esbuild-plugin-vue
  */
 import fs from 'fs'

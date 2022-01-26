@@ -146,6 +146,7 @@ class: 'custom-class'
 
 ## 此项目离不开以下开源项目
 
+- [unplugin-vue](https://github.com/sxzz/unplugin-vue)
 - [esbuild-plugin-vue](https://github.com/egoist/esbuild-plugin-vue)
 - [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
 - [vueuse](https://github.com/vueuse/vueuse)
