@@ -5,7 +5,7 @@ import fs from 'fs'
 import ora from 'ora'
 import klawSync from 'klaw-sync'
 import { parse, init } from 'es-module-lexer'
-import vue from './plugins/esbuild-vue-plugin'
+import vue from 'unplugin-vue/esbuild'
 
 const PACKAGES_PATH = path.resolve(
   __dirname,
@@ -22,7 +22,19 @@ async function run(options?: BuildOptions) {
     outdir: `${cwd()}/dist/es`,
     bundle: true,
     entryPoints: componentEntrys,
-    plugins: [vue()],
+    plugins: [
+      vue({
+        sourceMap: false,
+        style: {
+          preprocessLang: 'styl',
+          // preprocessOptions: {
+          //   stylus: {
+          //     additionalData: `@import '${process.cwd()}/src/styles/index.styl'`,
+          //   },
+          // },
+        },
+      }),
+    ],
     loader: { '.png': 'dataurl' },
     external: [
       'vue',
@@ -37,6 +49,9 @@ async function run(options?: BuildOptions) {
   })
 }
 
+/**
+ * @deprecated
+ */
 async function bundle(options?: BuildOptions) {
   await build({
     outfile: `${cwd()}/dist/es/my-lib.esm.js`,
@@ -50,6 +65,7 @@ async function bundle(options?: BuildOptions) {
     ...options,
   })
 }
+
 const spinner = ora('Build...').start()
 
 Promise.all([

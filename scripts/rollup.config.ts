@@ -1,7 +1,7 @@
 import path from 'path'
 import { nodeResolve } from '@rollup/plugin-node-resolve'
 import postcss from 'rollup-plugin-postcss'
-import vue from 'rollup-plugin-vue'
+import vue from 'unplugin-vue/rollup'
 import alias from '@rollup/plugin-alias'
 import esbuild from 'rollup-plugin-esbuild'
 import replace from '@rollup/plugin-replace'
@@ -23,14 +23,14 @@ const getPlugins = () => [
   }),
   nodeResolve(),
   vue({
-    target: 'browser',
-    preprocessStyles: true,
-    preprocessOptions: {
-      stylus: {
-        additionalData: `@import '${process.cwd()}/src/styles/index.styl'`,
+    style: {
+      preprocessLang: 'styl',
+      preprocessOptions: {
+        stylus: {
+          additionalData: `@import '${process.cwd()}/src/styles/index.styl'`,
+        },
       },
     },
-    exposeFilename: false,
   }),
   alias({
     entries: [
