@@ -1,6 +1,6 @@
 # A Vue3 UI library template
 
-[中文文档](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/README.zh-CN.md)
+[中文文档](https://github.com/zouhangwithsweet/vue-components-lib-seed/blob/master/README.zh-CN.md)
 
 Help you quickly create a component library.
 
@@ -10,7 +10,7 @@ Help you quickly create a component library.
 
 ## Docs
 
-- [doc example](https://zouhangwithsweet.github.io/vuecomponent-seed/)
+- [doc example](https://vuecomponent-seed.vercel.app/)
 
 ## Feature
 
@@ -23,7 +23,7 @@ Help you quickly create a component library.
 
 ## How to use
 
-[Generate a repository by vuecompoent-seed](https://github.com/zouhangwithsweet/vuecomponent-seed/generate)
+[Generate a repository by vue-components-lib-seed](https://github.com/zouhangwithsweet/vue-components-lib-seed/generate)
 
 ### Checklist
 
@@ -108,7 +108,7 @@ yarn docs:build
 
 ### Docs deploy
 
-Here is a git [action](https://github.com/zouhangwithsweet/vuecomponent-seed/blob/master/.github/workflows/build.yml). When you push the code to the `master` branch, the document will be automatically deployed on `gh-pages` branch.
+Here is a git [action](https://github.com/zouhangwithsweet/vue-components-lib-seed/blob/master/.github/workflows/build.yml). When you push the code to the `master` branch, the document will be automatically deployed on `gh-pages` branch.
 Then you can set the Github Pages's source on the `gh-pages` branch.
 
 ### Use demo code in doc

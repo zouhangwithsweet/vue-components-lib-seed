@@ -1,7 +1,7 @@
 # 快速开始
 
-<!--以下内容为 vuecomponent-seed 介绍，可以直接删除-->
-## vuecomponent-seed 介绍
+<!--以下内容为 vue-components-lib-seed 介绍，可以直接删除-->
+## vue-components-lib-seed 介绍
 
 帮助你快速创建组件库。
 
@@ -11,7 +11,7 @@
 
 ## 文档
 
-- [文档示例](https://zouhangwithsweet.github.io/vuecomponent-seed/)
+- [文档示例](https://vuecomponent-seed.vercel.app/)
 
 ## 特点
 
@@ -24,7 +24,7 @@
 
 ## 怎样使用
 
-[通过 vuecompoent-seed 生成你的仓库](https://github.com/zouhangwithsweet/vuecomponent-seed/generate)
+[通过 vuecompoent-seed 生成你的仓库](https://github.com/zouhangwithsweet/vue-components-lib-seed/generate)
 
 ### 检查项
 
@@ -109,7 +109,7 @@ yarn docs:build
 
 ### 部署文档
 
-vuecompoent-seed 提供了一个 github [action](https://github.com/zouhangwithsweet/vuecomponent-seed/.github/workflows/build.yml)。 当你将代码推送到 `master` 分支时，文档会自动部署在 `gh-pages` 分支上。然后你可以把 `gh-pages` 分支设置为 Github Pages 的来源。
+vuecompoent-seed 提供了一个 github [action](https://github.com/zouhangwithsweet/vue-components-lib-seed/.github/workflows/build.yml)。 当你将代码推送到 `master` 分支时，文档会自动部署在 `gh-pages` 分支上。然后你可以把 `gh-pages` 分支设置为 Github Pages 的来源。
 
 ### 在文档中使用组件 demo
 
