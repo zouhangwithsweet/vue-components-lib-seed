@@ -10,18 +10,22 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v2
+        with:
+          version: '6.26.1'
       - name: Setup node
         uses: actions/setup-node@v2
         with:
-          node-version: '14.16.1'
+          node-version: '16.13.2'
       - name: Install dependencies
-        run: yarn
+        run: pnpm install
       - name: build
-        run: yarn build
+        run: pnpm build
 
 
       - name: Build docs
-        run: yarn docs:build
+        run: pnpm docs:build
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@3.7.1
         with:
