@@ -13,6 +13,7 @@ export default defineConfig({
   },
   plugins: [
     vue(),
+    Icons(),
     createSvgSpritePlugin(),
     Pages({
       pagesDir: [
@@ -29,14 +30,6 @@ export default defineConfig({
       ],
       extensions: ['vue'],
     }),
-    Components({
-      dirs: ['src/packages'],
-      include: [/\.md$/],
-      resolvers: [
-        IconsResolver({prefix: false})
-      ],
-    }),
-    Icons(),
   ],
   resolve: {
     alias: {

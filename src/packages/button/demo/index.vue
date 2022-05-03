@@ -1,7 +1,7 @@
 <template>
   <div class="mylib-nav">
     <p class="home" @click="$router.push('/')">
-      <mdi:home />
+      <HomeIcon />
     </p>
     <p class="name">Button</p>
     <p class="name-zh"><del>组件中文名称</del></p>
@@ -27,13 +27,13 @@
   </div>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 import { createDemoModule } from '../../utils/index'
-const demos = import.meta.globEager('./demo*.vue')
+import HomeIcon from '~icons/mdi/home'
 
-export default createDemoModule(
-  'Button',
-  Object.entries(demos).map((demo) => demo[1].default)
+const demosRaw = import.meta.globEager('./demo*.vue')
+const demos = Object.keys(demosRaw).map(
+  (d) => demosRaw[d].default
 )
 </script>
 

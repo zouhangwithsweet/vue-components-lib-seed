@@ -5,7 +5,8 @@ type component = DefineComponent<{}, {}, any>
 
 export const createDemoModule = (
   name: string,
-  demos: component[]
+  demos: component[],
+  comps?: component[]
 ) =>
   defineComponent({
     name: `${name}-demo`,
