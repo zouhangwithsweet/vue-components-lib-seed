@@ -1,8 +1,6 @@
 <template>
   <div class="mylib-nav">
-    <p class="home" @click="$router.push('/')">
-      <HomeIcon />
-    </p>
+    <p class="home" @click="$router.push('/')">Home</p>
     <p class="name">Button</p>
     <p class="name-zh"><del>组件中文名称</del></p>
   </div>
@@ -29,7 +27,6 @@
 
 <script lang="ts" setup>
 import { createDemoModule } from '../../utils/index'
-import HomeIcon from '~icons/mdi/home'
 
 const demosRaw = import.meta.globEager('./demo*.vue')
 const demos = Object.keys(demosRaw).map(
