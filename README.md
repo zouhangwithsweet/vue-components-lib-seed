@@ -12,6 +12,8 @@ Help you quickly create a component library.
 
 - [doc example](https://vuecomponent-seed.vercel.app/)
 
+*I will rollback the doc builder to vitepress* :)
+
 ## Feature
 
 - :rainbow: Speedy dev & build
