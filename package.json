@@ -90,6 +90,7 @@
     "postcss-pxtorem": "^6.0.0",
     "prettier": "^2.2.1",
     "rimraf": "^3.0.2",
+    "rollup": "^2.71.1",
     "rollup-plugin-esbuild": "^4.2.3",
     "rollup-plugin-postcss": "^4.0.0",
     "rollup-plugin-terser": "^7.0.2",
