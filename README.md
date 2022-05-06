@@ -1,5 +1,7 @@
 # A Vue3 UI library template
 
+[![GitHub stars](https://img.shields.io/github/stars/zouhangwithsweet/vue-components-lib-seed)](https://github.com/zouhangwithsweet/vue-components-lib-seed/stargazers)
+
 [中文文档](https://github.com/zouhangwithsweet/vue-components-lib-seed/blob/master/README.zh-CN.md)
 
 Help you quickly create a component library.
@@ -12,7 +14,8 @@ Help you quickly create a component library.
 
 - [doc example](https://vuecomponent-seed.vercel.app/)
 
-*I will rollback the doc builder to vitepress* :)
+![image](https://img.shields.io/badge/need-help-orange)  
+**I will rollback the doc builder to vitepress :)**
 
 ## Feature
 
