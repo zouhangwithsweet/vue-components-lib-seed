@@ -12,10 +12,10 @@ Help you quickly create a component library.
 
 ## Docs
 
-- [doc example](https://vuecomponent-seed.vercel.app/)
-
 ![image](https://img.shields.io/badge/need-help-orange)  
 **I will rollback the doc builder to vitepress :)**
+
+- [doc example](https://vuecomponent-seed.vercel.app/)
 
 ## Feature
 
