@@ -1,4 +1,4 @@
-import { createServer } from 'fisand-doc'
+import { createServer } from 'vitepress'
 import { createLogger } from 'vite'
 import chokidar from 'chokidar'
 import path from 'path'
@@ -24,10 +24,12 @@ async function devDocs() {
     host: true,
   })
 
-  await server.listen()
+  await server.listen(8080)
 
   server.watcher.on('ready', () => {
-    logger.info('  \nServer is ready. Copy docs...\n')
+    logger.info(
+      '  \nServer is ready. Copy docs...http://localhost:8080/'
+    )
     docsChangeWatcher()
   })
 }
