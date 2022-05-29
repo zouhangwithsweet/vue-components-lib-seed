@@ -1,6 +1,7 @@
 import { defineConfig } from 'vitepress'
 import klawSync from 'klaw-sync'
 import path from 'path'
+import { mdPlugin } from './plugins/demo'
 
 const basePath = '/zh-CN/components'
 const componentDocs = klawSync(
@@ -139,118 +140,7 @@ export default defineConfig({
       copyright: 'Copyright © 2019-present Zou Hang',
     },
   },
+  markdown: {
+    config: (md) => mdPlugin(md),
+  },
 })
-
-function nav() {
-  return [
-    {
-      text: 'Guide',
-      link: '/guide/what-is-vitepress',
-      activeMatch: '/guide/',
-    },
-    {
-      text: 'Configs',
-      link: '/config/introduction',
-      activeMatch: '/config/',
-    },
-    {
-      text: 'Changelog',
-      link: 'https://github.com/vuejs/vitepress/blob/main/CHANGELOG.md',
-    },
-  ]
-}
-
-function sidebarGuide() {
-  return [
-    {
-      text: 'Introduction',
-      collapsible: true,
-      items: [
-        {
-          text: 'What is VitePress?',
-          link: '/guide/what-is-vitepress',
-        },
-        {
-          text: 'Getting Started',
-          link: '/guide/getting-started',
-        },
-        {
-          text: 'Configuration',
-          link: '/guide/configuration',
-        },
-        {
-          text: 'Asset Handling',
-          link: '/guide/asset-handling',
-        },
-        {
-          text: 'Markdown Extensions',
-          link: '/guide/markdown-extensions',
-        },
-        { text: 'Frontmatter', link: '/guide/frontmatter' },
-        {
-          text: 'Using Vue in Markdown',
-          link: '/guide/using-vue',
-        },
-        { text: 'API Reference', link: '/guide/api' },
-        { text: 'Deploying', link: '/guide/deploying' },
-      ],
-    },
-    {
-      text: 'Theme',
-      collapsible: true,
-      items: [
-        {
-          text: 'Introduction',
-          link: '/guide/theme-introduction',
-        },
-        { text: 'Layout', link: '/guide/theme-layout' },
-        { text: 'Homepage', link: '/guide/theme-homepage' },
-        { text: 'Footer', link: '/guide/theme-footer' },
-        {
-          text: 'Carbon Ads',
-          link: '/guide/theme-carbon-ads',
-        },
-      ],
-    },
-    {
-      text: 'Migrations',
-      collapsible: true,
-      items: [
-        {
-          text: 'Migration from VuePress',
-          link: '/guide/migration-from-vuepress',
-        },
-        {
-          text: 'Migration from VitePress 0.x',
-          link: '/guide/migration-from-vitepress-0',
-        },
-      ],
-    },
-  ]
-}
-
-function sidebarConfig() {
-  return [
-    {
-      text: 'Config',
-      items: [
-        {
-          text: 'Introduction',
-          link: '/config/introduction',
-        },
-        {
-          text: 'App Configs',
-          link: '/config/app-configs',
-        },
-        {
-          text: 'Theme Configs',
-          link: '/config/theme-configs',
-        },
-        {
-          text: 'Frontmatter Configs',
-          link: '/config/frontmatter-configs',
-        },
-      ],
-    },
-  ]
-}

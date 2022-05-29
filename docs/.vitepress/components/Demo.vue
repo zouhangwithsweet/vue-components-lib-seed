@@ -57,7 +57,7 @@ const copyHandler = () => {
       class="block absolute left-1/2 top-1.5rem text-xs text-blue-500 bg-blue-gray-50 rounded-md shadow-sm hidden"
     ></span>
     <div
-      class="fisand-demo flex flex-col mb-8 rounded-lg border-1 border-gray-200 border-solid last:mb-0 divide-y"
+      class="flex flex-col mb-8 rounded-lg border-1 border-gray-200 border-solid last:mb-0 divide-y"
     >
       <!-- title -->
       <div

@@ -14,9 +14,9 @@ Vue.creatApp().use(Button.name, Button)
 
 ## 案例
 
-<demo-wrapper
-  src="src/packages/button/demo"
-/>
+:::demo  
+src/packages/button/demo/demo0.vue  
+:::
 
 ## props
 

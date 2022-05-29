@@ -66,7 +66,7 @@ async function bundle(options?: BuildOptions) {
   })
 }
 
-const spinner = ora('Build...').start()
+const spinner = ora('Build... \n').start()
 
 Promise.all([
   run(),

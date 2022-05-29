@@ -26,8 +26,6 @@
 </template>
 
 <script lang="ts" setup>
-import { createDemoModule } from '../../utils/index'
-
 const demosRaw = import.meta.globEager('./demo*.vue')
 const demos = Object.keys(demosRaw).map(
   (d) => demosRaw[d].default

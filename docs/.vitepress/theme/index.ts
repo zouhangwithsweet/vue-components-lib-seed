@@ -1,6 +1,8 @@
 import DefaultTheme from 'vitepress/theme'
 import Demo from '../components/Demo.vue'
 import DemoWrapper from '../components/DemoWrapper.vue'
+import 'virtual:windi.css'
+
 import type { Theme } from 'vitepress'
 
 export default {

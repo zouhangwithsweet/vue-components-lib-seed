@@ -9,7 +9,7 @@ const props = defineProps({
   styles: { type: String, default: '' },
   htmlStrs: { type: String, default: '' },
   codeStrs: { type: String, default: '' },
-  src: { type: String, default: undefined },
+  source: { type: String, default: undefined },
 })
 
 const anchor = '&-&'
@@ -31,7 +31,7 @@ const styless = computed(() => props.styles.split(anchor))
 </script>
 
 <template>
-  <div class="fisand-demo-container">
+  <div>
     <component
       :is="demo"
       v-for="(item, index) in comps"

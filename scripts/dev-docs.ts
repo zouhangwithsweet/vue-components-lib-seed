@@ -24,12 +24,10 @@ async function devDocs() {
     host: true,
   })
 
-  await server.listen(8080)
+  await server.listen()
 
   server.watcher.on('ready', () => {
-    logger.info(
-      '  \nServer is ready. Copy docs...http://localhost:8080/'
-    )
+    logger.info(`\nServer is ready. Copy docs... \n`)
     docsChangeWatcher()
   })
 }
