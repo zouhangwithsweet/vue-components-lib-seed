@@ -122,8 +122,8 @@ export default defineConfig({
     },
 
     editLink: {
-      repo: 'vuejs/vitepress',
-      branch: 'next',
+      repo: 'zouhangwithsweet/vue-components-lib-seed',
+      branch: 'master',
       dir: 'docs',
       text: 'Edit this page on GitHub',
     },
