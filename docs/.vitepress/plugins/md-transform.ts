@@ -1,6 +1,17 @@
-import fs from 'fs'
 import path from 'path'
+import klawSync from 'klaw-sync'
+
 import type { Plugin } from 'vite'
+
+const PACKAGES_PATH = path.resolve(
+  __dirname,
+  '../../../src/packages'
+)
+
+const components = klawSync(PACKAGES_PATH, {
+  nofile: true,
+  depthLimit: 0,
+}).map((dir) => path.basename(dir.path))
 
 export function MarkdownTransform(): Plugin {
   return {
@@ -11,7 +22,7 @@ export function MarkdownTransform(): Plugin {
 
       const componentId = path.basename(id, '.md')
 
-      if (componentId !== 'button') return
+      if (!components.includes(componentId)) return
 
       const append = {
         headers: [],

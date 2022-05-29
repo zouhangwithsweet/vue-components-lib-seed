@@ -128,7 +128,7 @@ vuecomponent-sedd 提供了一个全局组件 [`Demos`](https://github.com/zouha
 
 ### 自定义文档样式
 
-你可以在 `markdown` 文件的 `frontmatter` 新增 `class` 字段, 全局组件 `<Content>` 将会继承你定义的 `class`。 当然, `windicss` 也能在这里使用。
+你可以在 `markdown` 文件的 `frontmatter` 新增 `class` 字段, 全局组件 `<Content>` 将会继承你定义的 `class`。 当然, `unocss` 也能在这里使用。
 
 ```markdown
 ---
@@ -151,7 +151,7 @@ class: 'custom-class'
 - [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
 - [vueuse](https://github.com/vueuse/vueuse)
 - [vitepress-for-component](https://github.com/dewfall123/vitepress-for-component)
-- [windicss](https://github.com/windicss/windicss)
+- [unocss](https://github.com/unocss/unocss)
 - [Element Plus](https://github.com/element-plus/element-plus)
 
 ## 特别感谢

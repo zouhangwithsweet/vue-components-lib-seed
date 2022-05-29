@@ -133,7 +133,7 @@ This is currently the only way to show demo. [More info](https://github.com/zouh
 
 ### Custom doc style
 
-You can add the `class` in frontmatter, then the `<Content>` would inherit the `class`. Of course, the `windicss` can be used here.
+You can add the `class` in frontmatter, then the `<Content>` would inherit the `class`. Of course, the `unocss` can be used here.
 
 ```markdown
 ---
@@ -156,7 +156,7 @@ class: 'custom-class'
 - [vue-dts-gen](https://github.com/egoist/vue-dts-gen)
 - [vueuse](https://github.com/vueuse/vueuse)
 - [vitepress-for-component](https://github.com/dewfall123/vitepress-for-component)
-- [windicss](https://github.com/windicss/windicss)
+- [unocss](https://github.com/unocss/unocss)
 - [Element Plus](https://github.com/element-plus/element-plus)
 
 ## Thanks

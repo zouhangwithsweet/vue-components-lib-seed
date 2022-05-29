@@ -7,9 +7,8 @@ const props = defineProps({
   template: { type: String, default: '' },
   script: { type: String, default: '' },
   styles: { type: String, default: '' },
-  htmlStrs: { type: String, default: '' },
-  codeStrs: { type: String, default: '' },
-  source: { type: String, default: undefined },
+  source: { type: String, default: '' },
+  rawSource: { type: String, default: '' },
 })
 
 const anchor = '&-&'
@@ -17,10 +16,10 @@ const comps = Object.entries(props.demos).map(
   (demo) => demo[1].default
 )
 const decodedHtmlStrs = computed(() => [
-  ...props.htmlStrs.split(anchor),
+  ...props.source.split(anchor),
 ])
 const decodeCodeRaws = computed(() => [
-  ...props.codeStrs.split(anchor),
+  ...props.rawSource.split(anchor),
 ])
 
 const templates = computed(() =>
