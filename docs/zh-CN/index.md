@@ -2,11 +2,11 @@
 layout: home
 
 title: VueCompLibSeed
-titleTemplate: Vite & Vue powered static site generator.
+titleTemplate: Vite & Vue powered static site generator
 
 hero:
   name: VueComponentsLibSeed
-  text: A vue3.0 components library template.
+  text: A vue3.0 components library template
   tagline: Vue3.0 组件库的次佳实践.
   actions:
     - theme: brand

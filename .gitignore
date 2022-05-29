@@ -6,3 +6,4 @@ dist-ssr
 my-lib.ts
 docs/zh-CN/components
 docs/en-US/components
+coverage
