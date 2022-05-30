@@ -11,7 +11,7 @@ hero:
   actions:
     - theme: brand
       text: 开始使用
-      link: /zh-CN/components/
+      link: /zh-CN/components/components/quick-start.html
     - theme: alt
       text: 了解更多
       link: https://github.com/zouhangwithsweet/vue-components-lib-seed
