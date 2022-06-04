@@ -10,10 +10,10 @@ hero:
   tagline: Vue3.0 组件库的次佳实践.
   actions:
     - theme: brand
-      text: 开始使用
-      link: /zh-CN/components/components/quick-start.html
+      text: Quick Start
+      link: /en-US/components/quick-start.html
     - theme: alt
-      text: 了解更多
+      text: Learn More
       link: https://github.com/zouhangwithsweet/vue-components-lib-seed
 
 features:

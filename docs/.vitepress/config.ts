@@ -78,6 +78,14 @@ export default defineConfig({
     logo: '/logo.png',
     nav: [{ text: '组件', link: '/zh-CN/components/' }],
 
+    localeLinks: {
+      text: '',
+      items: [
+        { text: 'English', link: '/en-US/' },
+        { text: '简体中文', link: '/zh-CN/' },
+      ],
+    },
+
     sidebar: {
       '/en-US/components/': [
         {
