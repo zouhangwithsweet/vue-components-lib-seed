@@ -117,14 +117,18 @@ vuecompoent-seed 提供了一个 github [action](https://github.com/zouhangwiths
 
 在 `button.md` 文件中, 插入如下代码：
 
-```html
-<demo-wrapper
-  src="src/packages/button/demo"
-/>
+```markdown
+:::demo  
+src/packages/button/demo/demo0.vue  
+:::
+- or
+:::demo  
+src/packages/button/demo/demo*.vue  
+:::
 ```
 
-vuecomponent-sedd 提供了一个全局组件 [`Demos`](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/client/app/components/Demos.vue) 用来展示所有的组件示例。
-这也是当前展示组件实例的唯一方式。 [了解更多](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/node/markdown/plugins/demo.ts).
+~~vuecomponent-sedd 提供了一个全局组件 [`Demos`](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/client/app/components/Demos.vue) 用来展示所有的组件示例。
+这也是当前展示组件实例的唯一方式。 [了解更多](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/node/markdown/plugins/demo.ts).~~
 
 ### 自定义文档样式
 
