@@ -122,14 +122,18 @@ Take button as an example.
 
 In `button.md`, insert the following code
 
-```html
-<demo-wrapper
-  src="src/packages/button/demo"
-/>
+```markdown
+:::demo  
+src/packages/button/demo/demo0.vue  
+:::
+- or
+:::demo  
+src/packages/button/demo/demo*.vue  
+:::
 ```
 
-There is a global component [`Demos`](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/client/app/components/Demos.vue) to display all demos.
-This is currently the only way to show demo. [More info](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/node/markdown/plugins/demo.ts).
+~~There is a global component [`Demos`](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/client/app/components/Demos.vue) to display all demos.
+This is currently the only way to show demo. [More info](https://github.com/zouhangwithsweet/fisand-doc/blob/feat_fisand_doc/src/node/markdown/plugins/demo.ts).~~
 
 ### Custom doc style
 
