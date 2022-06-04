@@ -9,6 +9,7 @@ specifiers:
   '@rollup/plugin-node-resolve': ^13.0.0
   '@rollup/plugin-replace': ^2.4.2
   '@types/escape-html': ^1.0.2
+  '@types/glob': ^7.2.0
   '@types/jest': ^26.0.23
   '@types/klaw-sync': ^6.0.0
   '@types/markdown-it': ^12.2.3
@@ -95,6 +96,7 @@ devDependencies:
   '@rollup/plugin-node-resolve': 13.3.0_rollup@2.71.1
   '@rollup/plugin-replace': 2.4.2_rollup@2.71.1
   '@types/escape-html': 1.0.2
+  '@types/glob': 7.2.0
   '@types/jest': 26.0.24
   '@types/klaw-sync': 6.0.1
   '@types/markdown-it': 12.2.3

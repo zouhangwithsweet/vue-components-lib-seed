@@ -4,6 +4,7 @@ import chokidar from 'chokidar'
 import path from 'path'
 import fs from 'fs'
 import klawSync from 'klaw-sync'
+import chalk from 'chalk'
 
 const logger = createLogger('info', {
   prefix: 'seed',
@@ -22,12 +23,16 @@ export const componentEntrys = klawSync(PACKAGES_PATH, {
 async function devDocs() {
   const server = await createServer('docs', {
     host: true,
+    port: 3080,
   })
 
   await server.listen()
 
   server.watcher.on('ready', () => {
     logger.info(`\nServer is ready. Copy docs... \n`)
+    logger.info(
+      `${chalk.green.bold('http://localhost:3080/')} \n`
+    )
     docsChangeWatcher()
   })
 }
@@ -51,7 +56,7 @@ function docsChangeWatcher() {
       ignoreInitial: true,
     })
     .on('all', (_, filePath) => {
-      const compoentName = path.basename(
+      const componentName = path.basename(
         path.dirname(filePath)
       )
 
@@ -59,7 +64,7 @@ function docsChangeWatcher() {
         const descFile = path.resolve(
           process.cwd(),
           `docs/${lang}/components`,
-          path.basename(compoentName) + '.md'
+          path.basename(componentName) + '.md'
         )
         fs.mkdirSync(path.dirname(descFile), {
           recursive: true,

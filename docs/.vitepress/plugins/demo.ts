@@ -1,12 +1,14 @@
-import path from 'path'
+import { resolve } from 'path'
 import fs from 'fs'
 import MarkdownIt from 'markdown-it'
 import mdContainer from 'markdown-it-container'
 import { highlight } from '../utils/highlight'
 import type Token from 'markdown-it/lib/token'
 import type Renderer from 'markdown-it/lib/renderer'
+import glob from 'glob'
 
 const localMd = MarkdownIt()
+const anchor = '&-&'
 
 const docRoot = ''
 
@@ -39,31 +41,24 @@ export const mdPlugin = async (md: MarkdownIt) => {
       ) {
         const description = m && m.length > 1 ? m[1] : ''
         const sourceFileToken = tokens[idx + 2]
-        let source = ''
-        let sourceFile =
+        let source: string[] = []
+        const sourceFile =
           sourceFileToken.children?.[0].content ?? ''
+        source = getDemoSource(sourceFile).source
 
-        if (!sourceFile.endsWith('.vue')) {
-          sourceFile += '/index.vue'
-        }
-
-        if (sourceFileToken.type === 'inline') {
-          source = fs.readFileSync(
-            sourceFile.endsWith('.vue')
-              ? sourceFile
-              : path.resolve(docRoot, `${sourceFile}.vue`),
-            'utf-8'
-          )
-        }
         if (!source)
           throw new Error(
             `Incorrect source file: ${sourceFile}`
           )
 
-        return `<DemoWrapper :demos="demos" source="${encodeURIComponent(
-          highlightFn(source, 'vue')
-        )}" path="${sourceFile}" raw-source="${encodeURIComponent(
-          source
+        return `<DemoWrapper :demos="demos" source="${source
+          .map((s) =>
+            encodeURIComponent(highlightFn(s, 'vue'))
+          )
+          .join(
+            anchor
+          )}" path="${sourceFile}" raw-source="${encodeURIComponent(
+          source.join(anchor)
         )}" description="${encodeURIComponent(
           localMd.render(description)
         )}">`
@@ -72,4 +67,21 @@ export const mdPlugin = async (md: MarkdownIt) => {
       }
     },
   } as ContainerOpts)
+}
+
+function getDemoSource(path: string) {
+  const truePath =
+    path.startsWith('./') || path.startsWith('../')
+      ? resolve(docRoot, path)
+      : resolve(process.cwd(), path)
+
+  const demoEntries = glob.sync(truePath)
+  const demoCodeRaws = demoEntries.map((p: string) => {
+    return fs.readFileSync(p, 'utf-8')
+  })
+
+  return {
+    source: demoCodeRaws,
+    truePath,
+  }
 }
