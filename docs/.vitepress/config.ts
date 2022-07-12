@@ -131,7 +131,7 @@ export default defineConfig({
 
     editLink: {
       pattern:
-        'https://github.com/zouhangwithsweet/vue-components-lib-seed/edit/master/docs/:path',
+        'https://github.com/zouhangwithsweet/vue-components-lib-seed/',
       text: 'Edit this page on GitHub',
     },
 
