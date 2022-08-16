@@ -10,10 +10,9 @@ Help you quickly create a component library.
 - :airplane: build with `esbuild`
 - :helicopter: generate types with `ts-morph`
 
-## Docs [WIP]
+## Docs
 
-![image](https://img.shields.io/badge/need-help-orange)  
-**I will rollback the doc builder to vitepress :)**
+power by vitepress
 
 - [doc example](https://vuecomponent-seed.vercel.app/)
 
