@@ -1,0 +1,1 @@
+import{d as c,o as p,c as s}from"../app.19affd60.js";var l=(t,o)=>{const e=t.__vccOpts||t;for(const[a,r]of o)e[a]=r;return e},u=c({name:"Button",props:{type:{type:String,default:"default"}},setup(){}}),_={class:"default"};function d(t,o,e,a,r,f){return p(),s("button",_,"click")}var n=l(u,[["render",d]]);n.install=t=>{t.component(n.name,n)};
